@@ -1,11 +1,12 @@
 ---
 - name: Network Getting Started First Playbook
   connection: network_cli
+  network_os: cisco.ios.ios
   become: yes
   hosts: all
   tasks: 
   
      - name: ensure that the desired
-       cisco.ios.ios_command_module: 
+       cisco.ios.ios.config: 
          commands:
           - hostname test 
